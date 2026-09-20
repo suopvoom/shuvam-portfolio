@@ -1,8 +1,13 @@
 import { Certificate } from './types';
+import deloitteDataAnalyticsImg from '../assets/certificates/deloitte-data-analytics.png';
+import deloitteTechnologyImg from '../assets/certificates/deloitte-technology.png';
+import swayamAiMarketingImg from '../assets/certificates/swayam-ai-marketing.png';
+import prodigyLorImg from '../assets/certificates/prodigy-lor.png';
 
 /**
  * Genuine academic and technical certifications.
- * Easy to update: add a new certificate object to the array to automatically display it in the Certifications section.
+ * Uses direct Vite-bundled asset imports to guarantee 100% reliable image resolution
+ * across both local development and production Vercel environments.
  */
 export const certificatesData: Certificate[] = [
   {
@@ -11,7 +16,7 @@ export const certificatesData: Certificate[] = [
     issuer: "Deloitte (via Forage)",
     issueDate: "April 15th, 2026",
     period: "January 2026 – April 2026",
-    image: "/certificates/deloitte-data-analytics.png",
+    image: deloitteDataAnalyticsImg,
     pdfUrl: "/certificates/deloitte-data-analytics.pdf",
     skills: ["Data Analysis", "Forensic Technology", "Pattern Recognition", "Data Modeling", "Business Insights"],
     tasks: ["Data analysis", "Forensic technology"],
@@ -30,7 +35,7 @@ export const certificatesData: Certificate[] = [
     issuer: "Deloitte (via Forage)",
     issueDate: "December 23rd, 2025",
     period: "October 2025 – December 2025",
-    image: "/certificates/deloitte-technology.png",
+    image: deloitteTechnologyImg,
     pdfUrl: "/certificates/deloitte-technology.pdf",
     skills: ["Software Engineering", "Coding Standards", "Application Development", "System Architecture", "Problem Solving"],
     tasks: ["Coding", "Development"],
@@ -50,7 +55,7 @@ export const certificatesData: Certificate[] = [
     issueDate: "January 31st, 2026",
     period: "July 2025 Semester (Proctored Exam: 12 Dec 2025)",
     gradeOrScore: "91.2% Consolidated Score",
-    image: "/certificates/swayam-ai-marketing.png",
+    image: swayamAiMarketingImg,
     pdfUrl: "/certificates/swayam-ai-marketing.pdf",
     credentialId: "WB10020320",
     credentialUrl: "https://swayam.gov.in/",
@@ -67,7 +72,7 @@ export const certificatesData: Certificate[] = [
     issueDate: "February 1st, 2026",
     period: "January 2026 – February 2026",
     gradeOrScore: "Manager Endorsement",
-    image: "/certificates/prodigy-lor.png",
+    image: prodigyLorImg,
     pdfUrl: "/certificates/prodigy-lor.pdf",
     credentialId: "PIT/JAN26/00382",
     skills: ["Software Engineering", "Clean Code", "Problem Solving", "Team Collaboration", "Rapid Adaptation"],

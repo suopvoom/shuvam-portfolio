@@ -1,8 +1,10 @@
 import { LetterOfRecommendation } from './types';
+import prodigyLorImg from '../assets/certificates/prodigy-lor.png';
 
 /**
  * Letter of Recommendation data from Prodigy InfoTech.
  * Extracted with high fidelity from the official corporate recommendation letter.
+ * Uses direct Vite-bundled asset import to guarantee production image resolution.
  */
 export const recommendationData: LetterOfRecommendation = {
   id: "lor-prodigy-infotech",
@@ -31,6 +33,6 @@ export const recommendationData: LetterOfRecommendation = {
     "Engineering Teamwork",
     "Dedicated Work Ethic"
   ],
-  documentImage: "/certificates/prodigy-lor.png",
+  documentImage: prodigyLorImg,
   pdfUrl: "/certificates/prodigy-lor.pdf"
 };
