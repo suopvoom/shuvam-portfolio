@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230c0f17'/><path d='M30 68 L50 32 L70 68' stroke='%23f59e0b' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='52' r='4' fill='%23f59e0b'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shuvam Chowdhury — BCA student at IEM Kolkata, aspiring Software Developer, and photographer. Personal portfolio showcasing real projects, core computer science, certifications, and photography." />
+    <meta name="theme-color" content="#0c0f17" />
+    <title>Shuvam Chowdhury — Software Developer &amp; BCA Student</title>
+    
+    <!-- Editorial & Technical Craft Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Prevent theme flash on reload -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.add('dark'); // Dark-first default
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BawXCy8N.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Ce1NjiSm.css">
+  </head>
+  <body class="bg-surface-light text-slate-800 dark:bg-surface-dark dark:text-slate-100 font-sans antialiased selection:bg-amber-500/20 selection:text-amber-600 dark:selection:text-amber-400 transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>

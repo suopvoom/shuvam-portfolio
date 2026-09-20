@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Accessible focus ring */
+  /* Accessible focus ring */
+  *:focus-visible {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Functional Glassmorphism */
+  .glass-surface {
+    @apply bg-white/80 dark:bg-surface-dark-card/80 backdrop-blur-md border border-surface-light-border dark:border-surface-dark-border;
+  }
+
+  .glass-nav {
+    @apply bg-white/85 dark:bg-[#0c0f17]/85 backdrop-blur-lg border-b border-surface-light-border dark:border-surface-dark-border;
+  }
+
+  .glass-modal {
+    @apply bg-white/95 dark:bg-[#131826]/95 backdrop-blur-xl border border-surface-light-border dark:border-surface-dark-border shadow-2xl;
+  }
+
+  .glass-card {
+    @apply bg-surface-light-card dark:bg-surface-dark-card border border-surface-light-border dark:border-surface-dark-border transition-all duration-300;
+  }
+
+  .glass-card-hover {
+    @apply hover:border-accent-500/40 dark:hover:border-accent-500/40 hover:shadow-lg dark:hover:shadow-amber-soft;
+  }
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0c0f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e263c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
