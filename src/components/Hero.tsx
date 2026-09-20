@@ -86,8 +86,8 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               className="flex flex-wrap items-center gap-2.5 mb-6"
             >
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-500/10 text-accent-700 dark:text-accent-400 border border-accent-500/20 text-xs font-mono font-medium">
-                <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
-                Available for Software Developer Internships
+                <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse shrink-0" />
+                <span>Aspiring Developer &bull; Building Ideas into Impact</span>
               </span>
               <span className="inline-flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 font-medium">
                 <GraduationCap className="w-3.5 h-3.5 text-accent-500" />
