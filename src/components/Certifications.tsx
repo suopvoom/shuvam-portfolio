@@ -18,8 +18,8 @@ export const Certifications: React.FC = () => {
       title="Certifications & Milestones"
       subtitle="Accredited academic achievements and enterprise simulation credentials verified through rigorous coursework, proctored examinations, and technical challenges."
     >
-      {/* 4-Column Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {certificatesData.map((cert: Certificate) => {
           return (
             <Card
