@@ -7,6 +7,7 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Certifications } from './components/Certifications';
+import { LetterOfRecommendation } from './components/LetterOfRecommendation';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -70,6 +71,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Certifications />
+        <LetterOfRecommendation />
         <Education />
         <Contact />
       </main>

@@ -36,11 +36,39 @@ export interface Certificate {
   title: string;
   issuer: string;
   issueDate: string;
+  period?: string;
   credentialId?: string;
   credentialUrl?: string;
-  thumbnailUrl?: string;
+  image: string;
+  pdfUrl?: string;
   skills: string[];
   description: string;
+  whatILearned: string;
+  signer?: string;
+  signerTitle?: string;
+  gradeOrScore?: string;
+  verificationCodes?: { label: string; code: string }[];
+  tasks?: string[];
+}
+
+export interface LetterOfRecommendation {
+  id: string;
+  title: string;
+  organization: string;
+  cin?: string;
+  date: string;
+  recommenderName: string;
+  recommenderTitle: string;
+  location?: string;
+  candidateName: string;
+  candidateInstitution: string;
+  role: string;
+  summary: string;
+  whatThisMeans: string;
+  keyQuotes: string[];
+  keyStrengths: string[];
+  documentImage: string;
+  pdfUrl?: string;
 }
 
 export interface EducationItem {

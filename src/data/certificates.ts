@@ -1,52 +1,83 @@
 import { Certificate } from './types';
 
 /**
- * Genuine academic and coursework certifications.
- * Easy to update: add a new object to the array to render a new certificate card automatically.
+ * Genuine academic and technical certifications.
+ * Easy to update: add a new certificate object to the array to automatically display it in the Certifications section.
  */
 export const certificatesData: Certificate[] = [
   {
-    id: "cert-cs-foundations",
-    title: "Computer Science & Programming Foundations",
-    issuer: "Institute of Engineering & Management (IEM)",
-    issueDate: "2024",
-    credentialId: "[CREDENTIAL ID - IEM-BCA-2024-CS1]",
-    credentialUrl: undefined, // [REPLACE WITH VERIFICATION LINK OR LEAVE UNDEFINED]
-    thumbnailUrl: undefined,  // [REPLACE WITH PATH TO CERTIFICATE IMAGE, e.g. '/certificates/cs-foundations.jpg']
-    skills: ["C Programming", "Algorithmic Logic", "Computer Organization", "Problem Solving"],
-    description: "Foundational academic coursework and laboratory evaluation covering structured programming, control structures, and computational thinking at IEM Kolkata."
+    id: "cert-deloitte-data-analytics",
+    title: "Data Analytics Job Simulation",
+    issuer: "Deloitte (via Forage)",
+    issueDate: "April 15th, 2026",
+    period: "January 2026 – April 2026",
+    image: "/certificates/deloitte-data-analytics.png",
+    pdfUrl: "/certificates/deloitte-data-analytics.pdf",
+    skills: ["Data Analysis", "Forensic Technology", "Pattern Recognition", "Data Modeling", "Business Insights"],
+    tasks: ["Data analysis", "Forensic technology"],
+    signer: "Tina McCreery",
+    signerTitle: "Chief Human Resources Officer, Deloitte",
+    verificationCodes: [
+      { label: "Enrolment Code", code: "Rb7R3v99TMoKBJeG7" },
+      { label: "User Code", code: "69007a3117a27298b4b5a791" }
+    ],
+    description: "Completed a comprehensive virtual simulation focused on practical enterprise data analysis and forensic investigation. Evaluated real-world datasets, identified statistical anomalies and critical patterns, and structured data-driven findings for strategic organizational decisions.",
+    whatILearned: "Developed a disciplined approach to forensic data analysis, translating complex datasets into actionable analytical insights for technical and business decision-making."
   },
   {
-    id: "cert-structured-c",
-    title: "Structured Programming & Problem Solving in C",
-    issuer: "Academic Curriculum & Lab Assessment",
-    issueDate: "2024",
-    credentialId: "[CREDENTIAL ID - IEM-BCA-2024-C2]",
-    credentialUrl: undefined,
-    thumbnailUrl: undefined,
-    skills: ["Pointers", "Dynamic Memory Allocation", "Data Structures", "File Handling"],
-    description: "Rigorous laboratory testing on pointer arithmetic, dynamic memory allocation (malloc/free), modular functions, and foundational data structures."
+    id: "cert-deloitte-technology",
+    title: "Technology Job Simulation",
+    issuer: "Deloitte (via Forage)",
+    issueDate: "December 23rd, 2025",
+    period: "October 2025 – December 2025",
+    image: "/certificates/deloitte-technology.png",
+    pdfUrl: "/certificates/deloitte-technology.pdf",
+    skills: ["Software Engineering", "Coding Standards", "Application Development", "System Architecture", "Problem Solving"],
+    tasks: ["Coding", "Development"],
+    signer: "Tina McCreery",
+    signerTitle: "Chief Human Resources Officer, Deloitte",
+    verificationCodes: [
+      { label: "Enrolment Code", code: "jB5W7EWqDrmH7fRhu" },
+      { label: "User Code", code: "69007a3117a27298b4b5a791" }
+    ],
+    description: "Engaged in enterprise-grade software development tasks simulating real Deloitte engineering projects. Worked through structured programming requirements, algorithmic problem-solving, modular code organization, and collaborative software engineering practices.",
+    whatILearned: "Strengthened professional software engineering practices, writing modular, maintainable code aligned with enterprise development standards."
   },
   {
-    id: "cert-technical-workshop",
-    title: "Hands-on Technical Workshop & Engineering Lab",
-    issuer: "IEM Kolkata Technical Society",
-    issueDate: "2024",
-    credentialId: "[CREDENTIAL ID - IEM-TECH-2024-W1]",
-    credentialUrl: undefined,
-    thumbnailUrl: undefined,
-    skills: ["Git & Version Control", "Collaborative Problem Solving", "Technical Communication"],
-    description: "Departmental practical workshop focusing on collaborative software development workflows, Git version control best practices, and team code reviews."
+    id: "cert-swayam-ai-marketing",
+    title: "AI in Digital and Social Media Marketing",
+    issuer: "SWAYAM / JAIN (Deemed-to-be University), Bengaluru",
+    issueDate: "January 31st, 2026",
+    period: "July 2025 Semester (Proctored Exam: 12 Dec 2025)",
+    gradeOrScore: "91.2% Consolidated Score",
+    image: "/certificates/swayam-ai-marketing.png",
+    pdfUrl: "/certificates/swayam-ai-marketing.pdf",
+    credentialId: "WB10020320",
+    credentialUrl: "https://swayam.gov.in/",
+    skills: ["Artificial Intelligence", "Digital Marketing Algorithms", "Predictive Analytics", "Consumer Insights", "Data-Driven Strategy"],
+    signer: "Dr. Dinesh N & Prof. Vasanthi Srinivasan",
+    signerTitle: "Pro Vice Chancellor, JAIN University & National Coordinator, IIM Bangalore",
+    description: "Successfully completed a rigorous, three-credit academic curriculum offered by JAIN University under the Government of India's SWAYAM initiative. Explored the practical integration of AI models, machine learning algorithms, and predictive analytics in digital engagement and audience segmentation.",
+    whatILearned: "Gained practical mastery over AI-driven analytics, data modeling, and algorithmic content strategies with an exceptional 91.2% academic distinction."
   },
   {
-    id: "cert-web-fundamentals",
-    title: "Modern Web Development Fundamentals",
-    issuer: "Self-Directed Study & Online Coursework",
-    issueDate: "2025",
-    credentialId: "[CREDENTIAL ID - WEB-DEV-2025-01]",
-    credentialUrl: undefined,
-    thumbnailUrl: undefined,
-    skills: ["HTML5", "CSS3 / Tailwind", "Modern JavaScript", "Responsive Design"],
-    description: "Practical curriculum covering modern semantic HTML, responsive web design principles, CSS Flexbox/Grid, and asynchronous client-side JavaScript."
+    id: "cert-prodigy-internship",
+    title: "Software Development Internship",
+    issuer: "Prodigy InfoTech",
+    issueDate: "February 1st, 2026",
+    period: "January 2026 – February 2026",
+    gradeOrScore: "Manager Endorsement",
+    image: "/certificates/prodigy-lor.png",
+    pdfUrl: "/certificates/prodigy-lor.pdf",
+    credentialId: "PIT/JAN26/00382",
+    skills: ["Software Engineering", "Clean Code", "Problem Solving", "Team Collaboration", "Rapid Adaptation"],
+    tasks: ["Software development", "Code optimization", "Team collaboration"],
+    signer: "Deven Chopra",
+    signerTitle: "Software Engineering Manager, Prodigy InfoTech",
+    verificationCodes: [
+      { label: "CIN", code: "PIT/JAN26/00382" }
+    ],
+    description: "Successfully completed the Software Development Internship at Prodigy InfoTech. Formally recognized and recommended by Software Engineering Manager Deven Chopra for exceptional coding standards, problem-solving abilities, and teamwork.",
+    whatILearned: "Mastered writing clean, efficient production code and collaborating effectively in an agile software engineering workflow."
   }
 ];
