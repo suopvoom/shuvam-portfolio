@@ -53,6 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
         rel={external ? 'noopener noreferrer' : undefined}
         download={download}
         aria-disabled={disabled}
+        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {icon && iconPosition === 'left' && <span className="shrink-0">{icon}</span>}
         <span>{children}</span>

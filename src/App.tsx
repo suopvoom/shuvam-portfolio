@@ -50,6 +50,65 @@ export default function App() {
     setIsDark((prev) => !prev);
   };
 
+  // Smooth scroll to sections without leaving hash in browser URL
+  useEffect(() => {
+    const cleanHash = () => {
+      if (window.location.hash) {
+        const targetId = window.location.hash.replace('#', '');
+        const element = document.getElementById(targetId);
+        if (element) {
+          setTimeout(() => {
+            const navHeight = 70;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }, 150);
+        }
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    };
+
+    cleanHash();
+    window.addEventListener('hashchange', cleanHash);
+
+    // Intercept clicks on any hash anchor link to prevent URL hash change
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('a');
+      if (!target) return;
+      const href = target.getAttribute('href');
+      if (!href) return;
+
+      if (href === '#') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      } else if (href.startsWith('#') && href.length > 1) {
+        const id = href.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          e.preventDefault();
+          const navHeight = 70;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick, true);
+    return () => {
+      window.removeEventListener('hashchange', cleanHash);
+      document.removeEventListener('click', handleAnchorClick, true);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-surface-light dark:bg-surface-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
       {/* Task 1: Premium Entrance Animation (Full-screen overlay on every load/refresh) */}
