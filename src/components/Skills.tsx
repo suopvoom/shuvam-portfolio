@@ -42,13 +42,13 @@ export const Skills: React.FC = () => {
     >
       {/* View Switcher: Interactive Matrix vs Accessible List */}
       <div className="flex items-center justify-between gap-4 mb-8">
-        <div className="flex items-center gap-1.5 p-1 rounded-lg bg-slate-100 dark:bg-surface-dark-elevated border border-surface-light-border dark:border-surface-dark-border">
+        <div className="flex items-center gap-1.5 p-1 rounded-lg bg-white/70 dark:bg-surface-dark-elevated/70 backdrop-blur-md border border-slate-200/80 dark:border-surface-dark-border shadow-xs">
           <button
             onClick={() => setViewMode('matrix')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
               viewMode === 'matrix'
-                ? 'bg-white dark:bg-surface-dark text-accent-600 dark:text-accent-400 font-semibold shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                ? 'bg-white dark:bg-surface-dark text-accent-700 dark:text-accent-400 font-semibold shadow-sm'
+                : 'text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
             aria-pressed={viewMode === 'matrix'}
           >
@@ -59,8 +59,8 @@ export const Skills: React.FC = () => {
             onClick={() => setViewMode('accessible')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
               viewMode === 'accessible'
-                ? 'bg-white dark:bg-surface-dark text-accent-600 dark:text-accent-400 font-semibold shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                ? 'bg-white dark:bg-surface-dark text-accent-700 dark:text-accent-400 font-semibold shadow-sm'
+                : 'text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
             aria-pressed={viewMode === 'accessible'}
           >
@@ -69,7 +69,7 @@ export const Skills: React.FC = () => {
           </button>
         </div>
 
-        <div className="text-xs text-slate-500 dark:text-slate-400 font-mono hidden sm:block">
+        <div className="text-xs text-slate-600 dark:text-slate-400 font-mono hidden sm:block">
           Tap or click any skill card to expand details
         </div>
       </div>
@@ -81,7 +81,7 @@ export const Skills: React.FC = () => {
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-500 animate-pulse" />
               <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">
-                Core Strengths <span className="text-sm font-normal text-slate-500 dark:text-slate-400 font-mono">(Comfortable with)</span>
+                Core Strengths <span className="text-sm font-normal text-slate-600 dark:text-slate-400 font-mono">(Comfortable with)</span>
               </h3>
             </div>
 
@@ -108,8 +108,8 @@ export const Skills: React.FC = () => {
                       hoverable
                       className={`h-full border transition-all duration-300 ${
                         isExpanded
-                          ? 'border-accent-500/60 dark:border-accent-500/60 shadow-amber-soft dark:bg-surface-dark-card'
-                          : 'hover:border-accent-500/30'
+                          ? 'border-accent-500/60 dark:border-accent-500/60 shadow-amber-soft bg-white/95 dark:bg-surface-dark-card'
+                          : 'border-slate-200/80 dark:border-surface-dark-border hover:border-accent-500/40'
                       }`}
                     >
                       {/* Card Header */}
@@ -140,8 +140,8 @@ export const Skills: React.FC = () => {
 
                       {/* Expandable Application Concepts */}
                       {isExpanded && (
-                        <div className="mt-5 pt-4 border-t border-slate-100 dark:border-surface-dark-border/60 animate-fade-in">
-                          <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block mb-2">
+                        <div className="mt-5 pt-4 border-t border-slate-200/60 dark:border-surface-dark-border/60 animate-fade-in">
+                          <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-2 font-semibold">
                             Practical Competencies
                           </span>
                           <div className="space-y-1.5">
@@ -169,7 +169,7 @@ export const Skills: React.FC = () => {
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
               <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">
-                Working Knowledge <span className="text-sm font-normal text-slate-500 dark:text-slate-400 font-mono">(Moderate / Learning)</span>
+                Working Knowledge <span className="text-sm font-normal text-slate-600 dark:text-slate-400 font-mono">(Moderate / Learning)</span>
               </h3>
             </div>
 
@@ -188,7 +188,6 @@ export const Skills: React.FC = () => {
                     }}
                     tabIndex={0}
                     role="button"
-                    aria-expanded={isExpanded}
                     aria-label={`${skill.name} skill details`}
                     className="cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-500 rounded-xl"
                   >
@@ -196,8 +195,8 @@ export const Skills: React.FC = () => {
                       hoverable
                       className={`h-full border transition-all duration-300 ${
                         isExpanded
-                          ? 'border-sky-500/60 dark:border-sky-500/60 shadow-md dark:bg-surface-dark-card'
-                          : 'hover:border-sky-500/30'
+                          ? 'border-sky-500/60 dark:border-sky-500/60 shadow-md bg-white/95 dark:bg-surface-dark-card'
+                          : 'border-slate-200/80 dark:border-surface-dark-border hover:border-sky-500/40'
                       }`}
                     >
                       {/* Card Header */}
@@ -228,8 +227,8 @@ export const Skills: React.FC = () => {
 
                       {/* Expandable Application Concepts */}
                       {isExpanded && (
-                        <div className="mt-5 pt-4 border-t border-slate-100 dark:border-surface-dark-border/60 animate-fade-in">
-                          <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block mb-2">
+                        <div className="mt-5 pt-4 border-t border-slate-200/60 dark:border-surface-dark-border/60 animate-fade-in">
+                          <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-2 font-semibold">
                             Practical Competencies
                           </span>
                           <div className="space-y-1.5">
@@ -254,7 +253,7 @@ export const Skills: React.FC = () => {
         </div>
       ) : (
         /* Accessible Screen-Reader Friendly List View */
-        <div className="space-y-8 p-6 glass-card rounded-2xl border">
+        <div className="space-y-8 p-6 glass-card rounded-2xl border border-slate-200/80 dark:border-surface-dark-border">
           <div>
             <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">
               1. Core Strengths (Comfortable With)
@@ -263,7 +262,7 @@ export const Skills: React.FC = () => {
               {coreSkills.map((s) => (
                 <li key={s.name} className="border-l-2 border-accent-500 pl-4">
                   <div className="font-bold text-slate-900 dark:text-white text-base">{s.name}</div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{s.contextNote}</p>
+                  <p className="text-sm text-slate-700 dark:text-slate-300 mt-1">{s.contextNote}</p>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                     Applications: {s.practicalApplications.join(', ')}
                   </div>
@@ -272,7 +271,7 @@ export const Skills: React.FC = () => {
             </ul>
           </div>
 
-          <div className="pt-6 border-t border-slate-100 dark:border-surface-dark-border/60">
+          <div className="pt-6 border-t border-slate-200/60 dark:border-surface-dark-border/60">
             <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">
               2. Working Knowledge (Moderate / Learning)
             </h3>
@@ -280,7 +279,7 @@ export const Skills: React.FC = () => {
               {workingSkills.map((s) => (
                 <li key={s.name} className="border-l-2 border-sky-500 pl-4">
                   <div className="font-bold text-slate-900 dark:text-white text-base">{s.name}</div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{s.contextNote}</p>
+                  <p className="text-sm text-slate-700 dark:text-slate-300 mt-1">{s.contextNote}</p>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                     Applications: {s.practicalApplications.join(', ')}
                   </div>
@@ -292,7 +291,7 @@ export const Skills: React.FC = () => {
       )}
 
       {/* Honest Skill Level Note */}
-      <div className="mt-12 p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-surface-dark-card border border-surface-light-border dark:border-surface-dark-border flex items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
+      <div className="mt-12 p-4 sm:p-5 rounded-xl bg-white/80 dark:bg-surface-dark-card/80 backdrop-blur-md border border-slate-200/80 dark:border-surface-dark-border flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300 shadow-2xs">
         <HelpCircle className="w-5 h-5 text-accent-500 shrink-0" />
         <div>
           <strong className="text-slate-900 dark:text-white">Authenticity Standard:</strong> Skills are classified purely into practical working confidence tiers without arbitrary percentage meters.

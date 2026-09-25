@@ -31,9 +31,9 @@ export const Badge: React.FC<BadgeProps> = ({
   if (variant === 'status' || status) {
     const currentStatus = status || (children as ProjectStatus);
     const statusMap: Record<ProjectStatus, string> = {
-      Completed: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20',
-      'In Progress': 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20',
-      Planned: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20',
+      Completed: 'bg-emerald-500/15 text-emerald-800 dark:text-emerald-400 border border-emerald-500/30',
+      'In Progress': 'bg-amber-500/15 text-amber-900 dark:text-amber-300 border border-amber-500/35 font-semibold',
+      Planned: 'bg-indigo-500/15 text-indigo-900 dark:text-indigo-300 border border-indigo-500/30',
     };
 
     return (
@@ -42,7 +42,7 @@ export const Badge: React.FC<BadgeProps> = ({
           statusMap[currentStatus] || statusMap['Completed']
         } ${className}`}
       >
-        <span className="w-1.5 h-1.5 rounded-full bg-current opacity-70 animate-pulse" />
+        <span className="w-1.5 h-1.5 rounded-full bg-current opacity-80 animate-pulse" />
         {children || currentStatus}
       </span>
     );
@@ -52,12 +52,12 @@ export const Badge: React.FC<BadgeProps> = ({
   if (variant === 'proficiency' || proficiency) {
     const currentProficiency = proficiency || (children as SkillProficiency);
     const profMap: Record<SkillProficiency, string> = {
-      'Comfortable with': 'bg-accent-500/15 text-accent-700 dark:text-accent-300 border border-accent-500/30 font-semibold',
-      'Moderate / Learning': 'bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/20',
-      Proficient: 'bg-accent-500/15 text-accent-700 dark:text-accent-300 border border-accent-500/30 font-semibold',
-      Comfortable: 'bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/20',
-      Familiar: 'bg-slate-200/70 dark:bg-surface-dark-muted/70 text-slate-700 dark:text-slate-300 border border-surface-light-border dark:border-surface-dark-border',
-      Learning: 'bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20',
+      'Comfortable with': 'bg-accent-500/15 text-accent-800 dark:text-accent-300 border border-accent-500/30 font-semibold',
+      'Moderate / Learning': 'bg-sky-500/15 text-sky-800 dark:text-sky-300 border border-sky-500/25',
+      Proficient: 'bg-accent-500/15 text-accent-800 dark:text-accent-300 border border-accent-500/30 font-semibold',
+      Comfortable: 'bg-sky-500/15 text-sky-800 dark:text-sky-300 border border-sky-500/25',
+      Familiar: 'bg-slate-200/80 dark:bg-surface-dark-muted/70 text-slate-800 dark:text-slate-300 border border-slate-300/80 dark:border-surface-dark-border',
+      Learning: 'bg-violet-500/15 text-violet-900 dark:text-violet-300 border border-violet-500/25',
     };
 
     return (
@@ -75,7 +75,7 @@ export const Badge: React.FC<BadgeProps> = ({
   if (variant === 'accent') {
     return (
       <span
-        className={`inline-flex items-center rounded-md bg-accent-500/10 text-accent-700 dark:text-accent-400 border border-accent-500/20 ${sizeStyles[size]} ${className}`}
+        className={`inline-flex items-center rounded-md bg-accent-500/15 text-accent-800 dark:text-accent-300 border border-accent-500/25 font-medium ${sizeStyles[size]} ${className}`}
       >
         {children}
       </span>
@@ -86,7 +86,7 @@ export const Badge: React.FC<BadgeProps> = ({
   if (variant === 'outline') {
     return (
       <span
-        className={`inline-flex items-center rounded-md border border-surface-light-border dark:border-surface-dark-border text-slate-600 dark:text-slate-300 bg-transparent ${sizeStyles[size]} ${className}`}
+        className={`inline-flex items-center rounded-md border border-slate-200/90 dark:border-surface-dark-border text-slate-700 dark:text-slate-300 bg-white/40 dark:bg-surface-dark-card/40 backdrop-blur-xs ${sizeStyles[size]} ${className}`}
       >
         {children}
       </span>
@@ -96,7 +96,7 @@ export const Badge: React.FC<BadgeProps> = ({
   // Default neutral badge
   return (
     <span
-      className={`inline-flex items-center rounded-md bg-slate-100 dark:bg-surface-dark-elevated text-slate-700 dark:text-slate-300 border border-surface-light-border dark:border-surface-dark-border ${sizeStyles[size]} ${className}`}
+      className={`inline-flex items-center rounded-md bg-white/80 dark:bg-surface-dark-elevated text-slate-800 dark:text-slate-300 border border-slate-200/80 dark:border-surface-dark-border shadow-2xs ${sizeStyles[size]} ${className}`}
     >
       {children}
     </span>

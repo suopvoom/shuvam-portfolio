@@ -93,23 +93,23 @@ export const Contact: React.FC = () => {
         {/* Left 5 Columns: Direct Contact Cards with Click-to-Action & Copy */}
         <div className="lg:col-span-5 space-y-4">
           {/* Email Card */}
-          <Card hoverable className="border transition-all duration-300">
+          <Card hoverable className="border border-slate-200/80 dark:border-surface-dark-border transition-all duration-300">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3">
-                <div className="p-3 rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400 border border-accent-500/20 shrink-0">
+                <div className="p-3 rounded-xl bg-accent-500/10 text-accent-700 dark:text-accent-400 border border-accent-500/20 shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block">
+                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-semibold">
                     Email Address
                   </span>
                   <a
                     href={`mailto:${profileData.email}`}
-                    className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors break-all"
+                    className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white hover:text-accent-700 dark:hover:text-accent-400 transition-colors break-all"
                   >
                     {profileData.email}
                   </a>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">
                     Click to open mail client
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export const Contact: React.FC = () => {
 
               <button
                 onClick={() => copyToClipboard(profileData.email, 'email')}
-                className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-dark-elevated border border-surface-light-border dark:border-surface-dark-border transition-all relative group"
+                className="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/80 dark:hover:bg-surface-dark-elevated border border-slate-200/80 dark:border-surface-dark-border transition-all relative group shadow-2xs"
                 aria-label="Copy email address"
                 title="Copy to clipboard"
               >
@@ -136,23 +136,23 @@ export const Contact: React.FC = () => {
           </Card>
 
           {/* Phone Card */}
-          <Card hoverable className="border transition-all duration-300">
+          <Card hoverable className="border border-slate-200/80 dark:border-surface-dark-border transition-all duration-300">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3">
-                <div className="p-3 rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400 border border-accent-500/20 shrink-0">
+                <div className="p-3 rounded-xl bg-accent-500/10 text-accent-700 dark:text-accent-400 border border-accent-500/20 shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block">
+                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-semibold">
                     Direct Phone
                   </span>
                   <a
                     href={`tel:${profileData.phoneRaw}`}
-                    className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors font-mono"
+                    className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white hover:text-accent-700 dark:hover:text-accent-400 transition-colors font-mono"
                   >
                     {profileData.phone}
                   </a>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">
                     Click to call directly
                   </span>
                 </div>
@@ -160,7 +160,7 @@ export const Contact: React.FC = () => {
 
               <button
                 onClick={() => copyToClipboard(profileData.phone, 'phone')}
-                className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-dark-elevated border border-surface-light-border dark:border-surface-dark-border transition-all relative group"
+                className="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/80 dark:hover:bg-surface-dark-elevated border border-slate-200/80 dark:border-surface-dark-border transition-all relative group shadow-2xs"
                 aria-label="Copy phone number"
                 title="Copy to clipboard"
               >
@@ -179,14 +179,14 @@ export const Contact: React.FC = () => {
           </Card>
 
           {/* LinkedIn Profile Card */}
-          <Card hoverable className="border transition-all duration-300">
+          <Card hoverable className="border border-slate-200/80 dark:border-surface-dark-border transition-all duration-300">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 shrink-0">
+                <div className="p-3 rounded-xl bg-sky-500/10 text-sky-700 dark:text-sky-400 border border-sky-500/20 shrink-0">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block">
+                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-semibold">
                     LinkedIn Network
                   </span>
                   <span className="text-sm font-semibold text-slate-900 dark:text-white">
@@ -209,7 +209,7 @@ export const Contact: React.FC = () => {
           </Card>
 
           {/* Location & Academic Base */}
-          <div className="p-4 rounded-xl bg-slate-50 dark:bg-surface-dark-card border border-surface-light-border dark:border-surface-dark-border text-xs text-slate-600 dark:text-slate-400 space-y-1 font-mono">
+          <div className="p-4 rounded-xl bg-white/70 dark:bg-surface-dark-card/75 backdrop-blur-md border border-slate-200/80 dark:border-surface-dark-border text-xs text-slate-600 dark:text-slate-400 space-y-1 font-mono shadow-2xs">
             <div className="flex items-center gap-2 text-slate-900 dark:text-white font-medium">
               <MapPin className="w-4 h-4 text-accent-500" />
               <span>{profileData.location}</span>
@@ -222,11 +222,11 @@ export const Contact: React.FC = () => {
 
         {/* Right 7 Columns: Client-Side Validated Contact Form */}
         <div className="lg:col-span-7">
-          <Card padding="lg" className="border">
+          <Card padding="lg" className="border border-slate-200/80 dark:border-surface-dark-border">
             <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
               Send a Direct Message
             </h3>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-6">
               Complete the form below to initiate communication. Includes client-side input validation.
             </p>
 
@@ -271,7 +271,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    className="block text-xs font-mono font-semibold text-slate-800 dark:text-slate-300 mb-1.5"
                   >
                     Your Name <span className="text-accent-500">*</span>
                   </label>
@@ -281,10 +281,10 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Morgan"
-                    className={`w-full px-4 py-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark-elevated text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 ${
+                    className={`w-full px-4 py-2.5 rounded-lg bg-white/80 dark:bg-surface-dark-elevated/75 backdrop-blur-xs text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 ${
                       errors.name
                         ? 'border-red-500 dark:border-red-400'
-                        : 'border-surface-light-border dark:border-surface-dark-border'
+                        : 'border-slate-200/90 dark:border-surface-dark-border'
                     }`}
                   />
                   {errors.name && (
@@ -299,7 +299,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    className="block text-xs font-mono font-semibold text-slate-800 dark:text-slate-300 mb-1.5"
                   >
                     Your Email <span className="text-accent-500">*</span>
                   </label>
@@ -309,10 +309,10 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. alex@company.com"
-                    className={`w-full px-4 py-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark-elevated text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 ${
+                    className={`w-full px-4 py-2.5 rounded-lg bg-white/80 dark:bg-surface-dark-elevated/75 backdrop-blur-xs text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 ${
                       errors.email
                         ? 'border-red-500 dark:border-red-400'
-                        : 'border-surface-light-border dark:border-surface-dark-border'
+                        : 'border-slate-200/90 dark:border-surface-dark-border'
                     }`}
                   />
                   {errors.email && (
@@ -327,7 +327,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="contact-subject"
-                    className="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    className="block text-xs font-mono font-semibold text-slate-800 dark:text-slate-300 mb-1.5"
                   >
                     Subject (Optional)
                   </label>
@@ -337,7 +337,7 @@ export const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="e.g. Software Internship / Collaboration"
-                    className="w-full px-4 py-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark-elevated text-slate-900 dark:text-white border border-surface-light-border dark:border-surface-dark-border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/80 dark:bg-surface-dark-elevated/75 backdrop-blur-xs text-slate-900 dark:text-white border border-slate-200/90 dark:border-surface-dark-border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
                   />
                 </div>
 
@@ -345,7 +345,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <label
                     htmlFor="contact-message"
-                    className="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    className="block text-xs font-mono font-semibold text-slate-800 dark:text-slate-300 mb-1.5"
                   >
                     Message <span className="text-accent-500">*</span>
                   </label>
@@ -355,10 +355,10 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Write your message here..."
-                    className={`w-full px-4 py-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark-elevated text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 resize-y ${
+                    className={`w-full px-4 py-2.5 rounded-lg bg-white/80 dark:bg-surface-dark-elevated/75 backdrop-blur-xs text-slate-900 dark:text-white border text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent-500 resize-y ${
                       errors.message
                         ? 'border-red-500 dark:border-red-400'
-                        : 'border-surface-light-border dark:border-surface-dark-border'
+                        : 'border-slate-200/90 dark:border-surface-dark-border'
                     }`}
                   />
                   {errors.message && (

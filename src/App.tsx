@@ -110,7 +110,33 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-surface-light dark:bg-surface-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div className="min-h-screen relative text-slate-900 dark:text-slate-100">
+      {/* Fixed Full-Viewport Background System with Smooth Cross-Fade & Readability Scrim */}
+      <div
+        className="fixed inset-0 pointer-events-none -z-50 overflow-hidden"
+        aria-hidden="true"
+      >
+        {/* Light Mode Background Image (white + blue) */}
+        <div
+          id="light-mode-background"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ease-out will-change-[opacity] opacity-100 dark:opacity-0"
+          style={{ backgroundImage: `url('/backgrounds/light-mode-bg.jpg')` }}
+        />
+
+        {/* Dark Mode Background Image (black textured) */}
+        <div
+          id="dark-mode-background"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ease-out will-change-[opacity] opacity-0 dark:opacity-100"
+          style={{ backgroundImage: `url('/backgrounds/dark-mode-bg.jpg')` }}
+        />
+
+        {/* Subtle Readability Layer — tuned so textures remain clearly recognizable */}
+        <div
+          id="background-readability-overlay"
+          className="absolute inset-0 transition-colors duration-500 ease-out bg-white/10 dark:bg-black/20"
+        />
+      </div>
+
       {/* Task 1: Premium Entrance Animation (Full-screen overlay on every load/refresh) */}
       {showIntro && (
         <EntranceAnimation
@@ -118,7 +144,6 @@ export default function App() {
           onComplete={handleIntroComplete}
         />
       )}
-
 
       {/* Top Floating Glassmorphic Navigation */}
       <Navbar isDark={isDark} onToggleTheme={toggleTheme} />

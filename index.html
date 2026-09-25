@@ -2,16 +2,41 @@
 <html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230c0f17'/><path d='M30 68 L50 32 L70 68' stroke='%23f59e0b' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='52' r='4' fill='%23f59e0b'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>Shuvam Chowdhury · Portfolio</title>
+    <meta name="title" content="Shuvam Chowdhury · Portfolio" />
     <meta name="description" content="Shuvam Chowdhury — BCA student at IEM Kolkata, aspiring Software Developer, and photographer. Personal portfolio showcasing real projects, core computer science, certifications, and photography." />
+    <meta name="application-name" content="Shuvam Chowdhury · Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Shuvam Chowdhury · Portfolio" />
     <meta name="theme-color" content="#0c0f17" />
-    <title>Shuvam Chowdhury — Software Developer &amp; BCA Student</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shuvam Chowdhury · Portfolio" />
+    <meta property="og:description" content="Shuvam Chowdhury — BCA student at IEM Kolkata, aspiring Software Developer, and photographer. Personal portfolio showcasing real projects, core computer science, certifications, and photography." />
+    <meta property="og:site_name" content="Shuvam Chowdhury · Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shuvam Chowdhury · Portfolio" />
+    <meta name="twitter:description" content="Shuvam Chowdhury — BCA student at IEM Kolkata, aspiring Software Developer, and photographer. Personal portfolio showcasing real projects, core computer science, certifications, and photography." />
     
     <!-- Editorial & Technical Craft Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Preload Light and Dark Background Images for instant cross-fade -->
+    <link rel="preload" as="image" href="/backgrounds/light-mode-bg.jpg" />
+    <link rel="preload" as="image" href="/backgrounds/dark-mode-bg.jpg" />
 
     <!-- Prevent theme flash on reload -->
     <script>
@@ -32,7 +57,7 @@
       })();
     </script>
   </head>
-  <body class="bg-surface-light text-slate-800 dark:bg-surface-dark dark:text-slate-100 font-sans antialiased selection:bg-amber-500/20 selection:text-amber-600 dark:selection:text-amber-400 transition-colors duration-300">
+  <body class="min-h-screen text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-amber-500/20 selection:text-amber-600 dark:selection:text-amber-400 overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

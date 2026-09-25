@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               variants={getItemVariant(4)}
               initial="hidden"
               animate={isReady ? "visible" : "hidden"}
-              className="mt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono"
+              className="mt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-mono"
             >
               <span className="inline-flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5 text-accent-500" />
@@ -139,7 +139,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               <span className="text-slate-300 dark:text-slate-700">&bull;</span>
               <a
                 href={`tel:${profileData.phoneRaw}`}
-                className="hover:text-accent-600 dark:hover:text-accent-400 transition-colors inline-flex items-center gap-1"
+                className="hover:text-accent-700 dark:hover:text-accent-400 transition-colors inline-flex items-center gap-1"
               >
                 <Phone className="w-3 h-3 text-accent-500" />
                 {profileData.phone}
@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               <span className="text-slate-300 dark:text-slate-700">&bull;</span>
               <a
                 href={`mailto:${profileData.email}`}
-                className="hover:text-accent-600 dark:hover:text-accent-400 transition-colors inline-flex items-center gap-1"
+                className="hover:text-accent-700 dark:hover:text-accent-400 transition-colors inline-flex items-center gap-1"
               >
                 <Mail className="w-3 h-3 text-accent-500" />
                 {profileData.email}
@@ -191,7 +191,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="p-3 rounded-lg text-slate-600 dark:text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-slate-100 dark:hover:bg-surface-dark-elevated transition-colors"
+                  className="p-3 rounded-lg text-slate-700 dark:text-slate-300 hover:text-accent-700 dark:hover:text-accent-400 hover:bg-white/80 dark:hover:bg-surface-dark-elevated border border-transparent hover:border-slate-200/80 dark:hover:border-surface-dark-border transition-colors shadow-2xs"
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -200,7 +200,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
-                  className="p-3 rounded-lg text-slate-600 dark:text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-slate-100 dark:hover:bg-surface-dark-elevated transition-colors"
+                  className="p-3 rounded-lg text-slate-700 dark:text-slate-300 hover:text-accent-700 dark:hover:text-accent-400 hover:bg-white/80 dark:hover:bg-surface-dark-elevated border border-transparent hover:border-slate-200/80 dark:hover:border-surface-dark-border transition-colors shadow-2xs"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -220,7 +220,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               {/* Thin animated accent glow ring */}
               <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-accent-500/30 via-transparent to-accent-500/20 blur-md opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full p-2 bg-gradient-to-b from-surface-light-border to-transparent dark:from-surface-dark-border dark:to-surface-dark-card border border-accent-500/30 shadow-2xl overflow-hidden flex items-center justify-center">
+              <div className="relative w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full p-2 bg-gradient-to-b from-white/80 to-transparent dark:from-surface-dark-border dark:to-surface-dark-card border border-accent-500/30 shadow-2xl overflow-hidden flex items-center justify-center">
                 <img
                   src="/assets/profile-photo.jpg"
                   alt={profileData.name}
@@ -261,10 +261,10 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
               <Card
                 hoverable
                 padding="sm"
-                className="w-full border border-surface-light-border dark:border-surface-dark-border bg-white/80 dark:bg-surface-dark-card/90 backdrop-blur-md shadow-md hover:border-accent-500/40 dark:hover:border-accent-500/40 transition-all duration-300"
+                className="w-full border border-slate-200/80 dark:border-surface-dark-border bg-white/80 dark:bg-surface-dark-card/90 backdrop-blur-md shadow-md hover:border-accent-500/50 dark:hover:border-accent-500/50 transition-all duration-300"
               >
-                <div className="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-100 dark:border-surface-dark-border/60">
-                  <div className="p-1.5 rounded-md bg-accent-500/10 text-accent-600 dark:text-accent-400">
+                <div className="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-200/60 dark:border-surface-dark-border/60">
+                  <div className="p-1.5 rounded-md bg-accent-500/10 text-accent-700 dark:text-accent-400">
                     <BookOpen className="w-3.5 h-3.5" />
                   </div>
                   <h3 className="font-display font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white font-mono">
@@ -276,7 +276,7 @@ export const Hero: React.FC<HeroProps> = ({ isReady = true }) => {
                   {profileData.currentlyLearning.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed"
+                      className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300 leading-relaxed"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-500 mt-1.5 shrink-0" />
                       <span>{item}</span>

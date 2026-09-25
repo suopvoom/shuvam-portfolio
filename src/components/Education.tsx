@@ -15,7 +15,7 @@ export const Education: React.FC = () => {
     >
       <div className="max-w-4xl mx-auto relative">
         {/* Vertical Timeline Track for Desktop */}
-        <div className="hidden md:block absolute left-8 top-6 bottom-6 w-[2px] bg-slate-200 dark:bg-surface-dark-border" />
+        <div className="hidden md:block absolute left-8 top-6 bottom-6 w-[2px] bg-slate-200/80 dark:bg-surface-dark-border" />
 
         <div className="space-y-8 md:space-y-12">
           {educationData.map((edu, index) => {
@@ -23,7 +23,7 @@ export const Education: React.FC = () => {
             return (
               <div key={index} className="relative flex flex-col md:flex-row items-start gap-6 md:gap-10">
                 {/* Timeline Node Indicator */}
-                <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark border-2 border-accent-500/40 shadow-sm shrink-0 z-10">
+                <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-2xl bg-white/85 dark:bg-surface-dark-card/85 backdrop-blur-md border-2 border-accent-500/40 shadow-sm shrink-0 z-10">
                   {isCurrent ? (
                     <GraduationCap className="w-7 h-7 text-accent-500" />
                   ) : (
@@ -37,7 +37,7 @@ export const Education: React.FC = () => {
                     hoverable
                     padding="lg"
                     className={`border transition-all duration-300 ${
-                      isCurrent ? 'border-accent-500/30 shadow-amber-soft' : ''
+                      isCurrent ? 'border-accent-500/40 shadow-amber-soft' : 'border-slate-200/80 dark:border-surface-dark-border'
                     }`}
                   >
                     {/* Header: Institution & Status */}
@@ -49,7 +49,7 @@ export const Education: React.FC = () => {
                           ) : (
                             <School className="w-5 h-5 text-sky-500" />
                           )}
-                          <span className="text-xs font-mono text-slate-400">
+                          <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
                             {edu.duration}
                           </span>
                         </div>
@@ -83,14 +83,14 @@ export const Education: React.FC = () => {
 
                     {/* Highlights */}
                     <div className="space-y-2 mb-6">
-                      <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 font-semibold">
+                      <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">
                         Academic Highlights
                       </h4>
                       <ul className="space-y-1.5">
                         {edu.highlights.map((highlight, hIdx) => (
                           <li
                             key={hIdx}
-                            className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
+                            className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 flex items-start gap-2"
                           >
                             <CheckCircle2 className="w-4 h-4 text-accent-500 mt-0.5 shrink-0" />
                             <span>{highlight}</span>
@@ -101,15 +101,15 @@ export const Education: React.FC = () => {
 
                     {/* Relevant Modules */}
                     {edu.relevantFocus && (
-                      <div className="pt-4 border-t border-slate-100 dark:border-surface-dark-border/60">
-                        <span className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider block mb-2">
+                      <div className="pt-4 border-t border-slate-200/60 dark:border-surface-dark-border/60">
+                        <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-2 font-semibold">
                           Key Focus Areas
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {edu.relevantFocus.map((course, cIdx) => (
                             <span
                               key={cIdx}
-                              className="text-xs font-mono px-2.5 py-1 rounded bg-slate-100 dark:bg-surface-dark-elevated text-slate-700 dark:text-slate-300 border border-surface-light-border dark:border-surface-dark-border"
+                              className="text-xs font-mono px-2.5 py-1 rounded bg-white/70 dark:bg-surface-dark-elevated text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-surface-dark-border"
                             >
                               {course}
                             </span>

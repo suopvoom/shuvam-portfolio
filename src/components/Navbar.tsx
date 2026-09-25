@@ -128,15 +128,16 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme }) => {
           {/* Right Action: Theme Toggle & Contact Button */}
           <div className="hidden lg:flex items-center gap-3">
             <button
+              id="theme-toggle-desktop"
               onClick={onToggleTheme}
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-dark-elevated border border-transparent hover:border-surface-light-border dark:hover:border-surface-dark-border transition-all focus-visible:ring-2 focus-visible:ring-accent-500"
+              className="p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-white/80 dark:hover:bg-surface-dark-elevated border border-transparent hover:border-slate-200/80 dark:hover:border-surface-dark-border transition-all focus-visible:ring-2 focus-visible:ring-accent-500 shadow-2xs"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDark ? (
                 <Sun className="w-4 h-4 text-accent-400 transition-transform duration-300 hover:rotate-45" />
               ) : (
-                <Moon className="w-4 h-4 text-slate-700 transition-transform duration-300 hover:-rotate-12" />
+                <Moon className="w-4 h-4 text-slate-800 transition-transform duration-300 hover:-rotate-12" />
               )}
             </button>
 
@@ -154,16 +155,17 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme }) => {
           {/* Mobile Menu Controls */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
+              id="theme-toggle-mobile"
               onClick={onToggleTheme}
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-surface-dark-elevated transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
+              className="p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-white/80 dark:hover:bg-surface-dark-elevated transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isDark ? <Sun className="w-4 h-4 text-accent-400" /> : <Moon className="w-4 h-4 text-slate-700" />}
+              {isDark ? <Sun className="w-4 h-4 text-accent-400" /> : <Moon className="w-4 h-4 text-slate-800" />}
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-dark-elevated transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
+              className="p-2 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-white/80 dark:hover:bg-surface-dark-elevated transition-colors focus-visible:ring-2 focus-visible:ring-accent-500"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -180,16 +182,16 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme }) => {
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="bg-white dark:bg-surface-dark-card border-b border-surface-light-border dark:border-surface-dark-border px-6 py-8 shadow-xl max-h-[calc(100vh-60px)] overflow-y-auto"
+            className="bg-white/95 dark:bg-surface-dark-card/95 backdrop-blur-xl border-b border-slate-200/80 dark:border-surface-dark-border px-6 py-8 shadow-xl max-h-[calc(100vh-60px)] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile Brand Wordmark */}
-            <div className="pb-4 mb-4 border-b border-slate-100 dark:border-surface-dark-border/50">
+            <div className="pb-4 mb-4 border-b border-slate-200/60 dark:border-surface-dark-border/50">
               <span className="font-display font-bold text-lg text-slate-900 dark:text-white">
-                Shuvam <span className="font-light text-slate-500 dark:text-slate-400">Chowdhury</span>
+                Shuvam <span className="font-light text-slate-600 dark:text-slate-400">Chowdhury</span>
                 <span className="text-accent-500 font-bold ml-0.5">.</span>
               </span>
-              <p className="text-xs font-mono text-slate-400 mt-0.5">Software Developer &bull; BCA @ IEM</p>
+              <p className="text-xs font-mono text-slate-500 dark:text-slate-400 mt-0.5">Software Developer &bull; BCA @ IEM</p>
             </div>
 
             <div className="flex flex-col space-y-4">
@@ -202,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme }) => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center justify-between text-base font-medium py-2 border-b border-slate-100 dark:border-surface-dark-border/50 ${
                       isActive
-                        ? 'text-accent-600 dark:text-accent-400 font-semibold'
+                        ? 'text-accent-700 dark:text-accent-400 font-semibold'
                         : 'text-slate-700 dark:text-slate-300'
                     }`}
                   >

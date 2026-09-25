@@ -47,7 +47,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
               {eyebrow && (
                 <div className="inline-flex items-center gap-2 mb-3">
                   <span className="w-6 h-[2px] bg-accent-500 rounded-full" />
-                  <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-accent-600 dark:text-accent-400 font-mono">
+                  <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-accent-700 dark:text-accent-400 font-mono">
                     {eyebrow}
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
                 {title}
               </h2>
               {subtitle && (
-                <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-700 dark:text-slate-400 leading-relaxed">
                   {subtitle}
                 </p>
               )}

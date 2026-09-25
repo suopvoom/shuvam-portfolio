@@ -30,6 +30,6 @@ export const profileData: Profile = {
   phone: "+91-7439197464",
   phoneRaw: "+917439197464",
   linkedinUrl: "https://www.linkedin.com/in/shuvam-chowdhury-2893a536a",
-  githubUrl: "https://github.com", // [REPLACE WITH REAL GITHUB USERNAME WHEN READY]
+  githubUrl: "https://github.com/suopvoom",
   resumePath: "/resume/shuvam-chowdhury-resume.pdf"
 };

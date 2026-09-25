@@ -77,8 +77,8 @@ export const Projects: React.FC = () => {
                 }}
                 className={`h-full flex flex-col justify-between border cursor-pointer group transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent-500 rounded-xl ${
                   isInProgress
-                    ? 'border-amber-500/40 dark:border-amber-500/30 hover:border-amber-500/70 shadow-amber-soft'
-                    : 'hover:border-accent-500/40'
+                    ? 'border-amber-500/50 dark:border-amber-500/35 hover:border-amber-500/80 shadow-amber-soft'
+                    : 'border-slate-200/80 dark:border-surface-dark-border hover:border-accent-500/50'
                 }`}
               >
                 <div>
@@ -88,7 +88,7 @@ export const Projects: React.FC = () => {
                       {project.status}
                     </Badge>
 
-                    <span className="text-xs font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-surface-dark-elevated text-slate-800 dark:text-slate-200 border border-surface-light-border dark:border-surface-dark-border font-semibold">
+                    <span className="text-xs font-mono px-2 py-0.5 rounded bg-white/80 dark:bg-surface-dark-elevated text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-surface-dark-border font-semibold shadow-2xs">
                       {project.language}
                     </span>
                   </div>
@@ -119,7 +119,7 @@ export const Projects: React.FC = () => {
                       {project.concepts.map((concept, cIdx) => (
                         <span
                           key={cIdx}
-                          className="inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded bg-accent-500/10 text-accent-700 dark:text-accent-300 border border-accent-500/20"
+                          className="inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded bg-accent-500/10 text-accent-800 dark:text-accent-300 border border-accent-500/25"
                         >
                           <Lightbulb className="w-2.5 h-2.5 text-accent-500" />
                           {concept}
@@ -130,13 +130,13 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Footer: Tech Stack Tags & Actions */}
-                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-surface-dark-border/60">
+                <div className="mt-6 pt-4 border-t border-slate-200/60 dark:border-surface-dark-border/60">
                   {/* Framework / Tools Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.frameworkOrTools.map((tool) => (
                       <span
                         key={tool}
-                        className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-surface-dark-elevated text-slate-600 dark:text-slate-400 border border-surface-light-border dark:border-surface-dark-border transition-colors group-hover:border-accent-500/30"
+                        className="text-[11px] font-mono px-2 py-0.5 rounded bg-white/70 dark:bg-surface-dark-elevated/80 text-slate-700 dark:text-slate-400 border border-slate-200/80 dark:border-surface-dark-border transition-colors group-hover:border-accent-500/30"
                       >
                         {tool}
                       </span>

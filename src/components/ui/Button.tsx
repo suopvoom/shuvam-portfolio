@@ -37,9 +37,9 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantStyles = {
     primary: 'bg-accent-500 text-slate-950 hover:bg-accent-400 active:bg-accent-600 shadow-sm font-semibold hover:shadow-amber-soft disabled:opacity-50 disabled:pointer-events-none',
-    secondary: 'bg-surface-light-elevated dark:bg-surface-dark-elevated text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-surface-dark-muted border border-surface-light-border dark:border-surface-dark-border disabled:opacity-50 disabled:pointer-events-none',
-    outline: 'border border-surface-light-border dark:border-surface-dark-border text-slate-700 dark:text-slate-200 hover:border-accent-500 hover:text-accent-600 dark:hover:text-accent-400 bg-transparent disabled:opacity-40 disabled:pointer-events-none',
-    ghost: 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-surface-dark-elevated bg-transparent disabled:opacity-40 disabled:pointer-events-none',
+    secondary: 'bg-white/80 dark:bg-surface-dark-elevated/80 backdrop-blur-xs text-slate-900 dark:text-slate-100 hover:bg-white dark:hover:bg-surface-dark-muted border border-slate-200/80 dark:border-surface-dark-border shadow-xs disabled:opacity-50 disabled:pointer-events-none',
+    outline: 'border border-slate-200/90 dark:border-surface-dark-border text-slate-800 dark:text-slate-200 hover:border-accent-500/80 hover:text-accent-700 dark:hover:text-accent-400 bg-white/50 dark:bg-surface-dark-card/40 backdrop-blur-xs disabled:opacity-40 disabled:pointer-events-none',
+    ghost: 'text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-white/60 dark:hover:bg-surface-dark-elevated/60 bg-transparent disabled:opacity-40 disabled:pointer-events-none',
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

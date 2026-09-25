@@ -26,12 +26,12 @@ export const Certifications: React.FC = () => {
               key={cert.id}
               hoverable
               padding="none"
-              className="flex flex-col justify-between h-full group border border-surface-light-border dark:border-surface-dark-border bg-white dark:bg-surface-dark-card overflow-hidden transition-all duration-300 hover:shadow-xl dark:hover:shadow-amber-soft/20"
+              className="flex flex-col justify-between h-full group border border-slate-200/80 dark:border-surface-dark-border bg-white/80 dark:bg-surface-dark-card/80 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-xl dark:hover:shadow-amber-soft/20 hover:border-accent-500/40 dark:hover:border-accent-500/40 rounded-xl"
             >
               <div>
                 {/* Certificate Image Preview with interactive overlay */}
                 <div
-                  className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950/80 border-b border-surface-light-border dark:border-surface-dark-border cursor-pointer group/img"
+                  className="relative aspect-[16/10] overflow-hidden bg-slate-100/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-surface-dark-border cursor-pointer group/img"
                   onClick={() => setSelectedCert(cert)}
                   role="button"
                   tabIndex={0}
@@ -57,8 +57,8 @@ export const Certifications: React.FC = () => {
                       <span>{cert.gradeOrScore}</span>
                     </div>
                   ) : (
-                    <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/80 text-accent-400 border border-accent-500/30 font-medium text-[11px] font-mono shadow-md backdrop-blur-xs flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-accent-400" />
+                    <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/85 text-accent-300 border border-accent-500/35 font-medium text-[11px] font-mono shadow-md backdrop-blur-xs flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-accent-300" />
                       <span>Enterprise Simulation</span>
                     </div>
                   )}
@@ -76,12 +76,12 @@ export const Certifications: React.FC = () => {
                 <div className="p-5 sm:p-6 space-y-4">
                   {/* Issuer & Date Row */}
                   <div className="flex items-center justify-between gap-2 text-xs">
-                    <span className="font-semibold text-accent-600 dark:text-accent-400 truncate flex items-center gap-1.5">
+                    <span className="font-semibold text-accent-700 dark:text-accent-400 truncate flex items-center gap-1.5">
                       <Award className="w-3.5 h-3.5 shrink-0" />
                       {cert.issuer}
                     </span>
                     <span className="text-slate-500 dark:text-slate-400 font-mono shrink-0 flex items-center gap-1">
-                      <Calendar className="w-3 h-3 text-slate-400" />
+                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
                       {cert.issueDate}
                     </span>
                   </div>
@@ -101,11 +101,11 @@ export const Certifications: React.FC = () => {
 
                   {/* Dedicated "What I Learned:" Block */}
                   <div className="p-3.5 rounded-r-lg rounded-l-xs bg-amber-500/10 dark:bg-amber-500/10 border-l-3 border-amber-500 text-xs">
-                    <div className="flex items-center gap-1.5 font-bold text-amber-700 dark:text-amber-400 mb-1 tracking-wide uppercase text-[10px] font-mono">
+                    <div className="flex items-center gap-1.5 font-bold text-amber-800 dark:text-amber-400 mb-1 tracking-wide uppercase text-[10px] font-mono">
                       <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
                       <span>What I Learned:</span>
                     </div>
-                    <p className="text-slate-700 dark:text-slate-200 italic leading-relaxed">
+                    <p className="text-slate-800 dark:text-slate-200 italic leading-relaxed">
                       "{cert.whatILearned}"
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export const Certifications: React.FC = () => {
 
               {/* Card Footer: View Action */}
               <div className="p-5 pt-0 sm:p-6 sm:pt-0">
-                <div className="pt-4 border-t border-slate-100 dark:border-surface-dark-border/60 flex items-center justify-between gap-3">
+                <div className="pt-4 border-t border-slate-200/60 dark:border-surface-dark-border/60 flex items-center justify-between gap-3">
                   <Button
                     variant="outline"
                     size="sm"
